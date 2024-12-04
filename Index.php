@@ -28,7 +28,7 @@ function displayMenu() {
 
                 $card = new Card($question, $answer);
 
-    // Appel de la fonction addCard() pour ajouter à les cartes créées à la liste de carte
+    // Appel de la fonction addCard() pour ajouter les cartes créées à la liste de cartes
                 $myList->addCard($card);
 
             }

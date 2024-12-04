@@ -3,6 +3,7 @@
 Ce projet est une petite application PHP orientée objet qui permet de créer et de visualiser des cartes composées d'une question et d'une réponse.
 
 ## Prérequis
+ll s'assurer d'avoir les éléments suivants:
 
 - PHP 7.4 ou supérieur
 - Composer

@@ -6,7 +6,7 @@ use boubacar\poo\Card;
 class ListCard {
     private array $listCards =[];
 
-// Methode pour ajouter une carte à la liste
+// Methode pour ajouter une carte à la liste de cartes
 public function addCard(Card $card){
 
     $this -> listCards[] = $card;
