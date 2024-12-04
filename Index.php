@@ -11,12 +11,13 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 function displayMenu() {
 
-    // Création d'une nouvelle instance de ListCard pour gérer les cartes
    //instanciation et initialisation (créer une nouvelle instance de la classe LisCard )         
 
     $myList = new ListCard();
     
     $nbreCard = readline(" combien de cartes voulez vous choisir? : ");
+
+    // Vérification de la valeur donnée.
     if (is_numeric($nbreCard)) {
         if ((int)$nbreCard > 0) {
             for ($i = 0; $i < $nbreCard; $i++) {
@@ -28,21 +29,24 @@ function displayMenu() {
                 $card = new Card($question, $answer);
 
                 $myList->addCard($card);
-                $myList->printCardsInfo();
+
             }
             
         } else {
-            echo "merci de saisir un nombre supérieur à 0 ". PHP_EOL;
             displayMenu();
         }
     } else {
         echo "Votre saisie n'est pas un nombre". PHP_EOL;
         displayMenu();
-    }    
+
+    }  
+    echo PHP_EOL . "Listing des cartes contenues dans la liste :" . PHP_EOL;
+    $myList->printCardsInfo();
+ 
 }
+
 // recursive 
 displayMenu();
 
-// création d'une fonction pour recceuilir les informations sur les cartes
 
 

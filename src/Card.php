@@ -7,7 +7,7 @@ class Card
     private string $question;
     private string $answer;
 
-    //création d'un constructeur
+    //création d'un constructeur de la classe Card
 
     public function __construct(string $question, string $answer)
     {
