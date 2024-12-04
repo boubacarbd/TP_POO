@@ -11,12 +11,13 @@ Ce projet est une petite application PHP orientée objet qui permet de créer et
 
 1. Clonez ce dépôt sur votre machine locale :
    ```
-   git clone https://github.com/votre-nom-utilisateur/tp-php-poo.git
+   git clone github.com/boubacarbd/TPPOO
+   
    ```
 
 2. Naviguez dans le répertoire du projet :
    ```
-   cd tp-php-poo
+   cd tp_poo
    ```
 
 3. Installez les dépendances avec Composer :
@@ -41,9 +42,10 @@ Suivez les instructions à l'écran pour ajouter des cartes et voir leur contenu
   - `ListCards.php` : Définition de la classe ListCards
 - `index.php` : Point d'entrée de l'application
 - `composer.json` : Configuration de Composer et autoloading
-- `README.md` : Ce fichier
+- `README.md` : Ce fichier 
 
 ## Fonctionnalités
+Cette application permet de faire 2 choses :
 
 - Création de cartes avec une question et une réponse
 - Affichage des cartes créées
