@@ -17,7 +17,7 @@ function displayMenu() {
     
     $nbreCard = readline(" combien de cartes voulez vous choisir? : ");
 
-    // Vérification de la valeur donnée.
+    // Vérification de la valeur donnée par l'utilisateur.
     if (is_numeric($nbreCard)) {
         if ((int)$nbreCard > 0) {
             for ($i = 0; $i < $nbreCard; $i++) {
@@ -28,25 +28,28 @@ function displayMenu() {
 
                 $card = new Card($question, $answer);
 
+    // Appel de la fonction addCard() pour ajouter à les cartes créées à la liste de carte
                 $myList->addCard($card);
 
             }
             
         } else {
-            displayMenu();
+           return displayMenu();
         }
     } else {
         echo "Votre saisie n'est pas un nombre". PHP_EOL;
-        displayMenu();
+        return displayMenu();
 
     }  
-    echo PHP_EOL . "Listing des cartes contenues dans la liste :" . PHP_EOL;
-    $myList->printCardsInfo();
+    return $myList;
+    
  
 }
 
 // recursive 
-displayMenu();
+$myList=displayMenu();
+echo PHP_EOL . "Listing des cartes contenues dans la liste :" . PHP_EOL;
+$myList->printCardsInfo();
 
 
 
